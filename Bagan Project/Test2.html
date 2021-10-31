@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Photography</title>
+<link rel="stylesheet">
+<style>
+    body{
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+    }
+    .dark-mode{
+        background-color: black;
+        color: white;
+    }
+    .light-mode{
+        background-color: white;
+        color: black;
+    }
+    #dm{
+        position:absolute;
+        right:0;
+        height:40px;
+        width:40px;
+        border-radius: 100px;
+    }
+</style>
+</head>
+<body>
+    <button id="dm" onclick="darkMode()">
+        <div class="dark-icon">
+        <img src="Background_photo/icons8-moon-and-stars-24.png" alt="Save icon"/>
+        </div>
+    </button>
+
+    <button onclick="darkMode()">DarkMode</button>
+    <button onclick="lightMode()">LightMode</button>
+    <p>
+        This is a simple Geeks For Geeks Text.
+        Dark Mode Website using HTML and Css &
+        JavaScript
+    </p>
+    <img src="Gallery/p12.jpg">
+    <h3 id="DarkModetext">Dark Mode is off</h3>
+    <script>
+        function darkMode(){
+            var element = document.body;
+            var content = document.getElementById("DarkModeText");
+            element.className="dark-mode";
+            content.innerText = "Dark Mode is ON";
+        }
+        function lightMode(){
+            var element = document.body;
+            var content = document.getElementById("DarkModeText");
+            element.className="light-mode";
+            content.innerText = "Dark Mode is OFF";
+        }
+    </script>
+</body>
+</html>
